@@ -124,10 +124,10 @@ namespace TuristickaAgencijaWebAPI
 
             services.AddScoped<ICRUDService<TuristickaAgencija.Model.Ocjene, object, OcjeneInsertRequest, OcjeneInsertRequest>,
                                         BaseCRUDService<TuristickaAgencija.Model.Ocjene, object, Ocjene, OcjeneInsertRequest, OcjeneInsertRequest>>();
-           
+
             services.AddScoped<ICRUDService<TuristickaAgencija.Model.Pretplate, PretplateSearchRequest, PretplateInsertRequest, PretplateInsertRequest>,
            PretplateService>();
-           
+
 
             services.AddScoped<ICRUDService<TuristickaAgencija.Model.Drzave, DrzaveSearchRequest, DrzaveInsertRequest, DrzaveInsertRequest>, DrzaveService>();
 

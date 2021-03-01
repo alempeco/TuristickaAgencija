@@ -21,8 +21,8 @@ namespace TuristickaAgencijaWebAPI.Services
 
             if (search?.PutovanjeId.HasValue == true && search?.Godina.HasValue == true)
             {
-                query = query.Where(x => x.PutovanjeId == search.PutovanjeId).
-                         Where(x => x.DatumPolaska.Year == search.Godina);
+                query = query.Where(x => x.PutovanjeId == search.PutovanjeId);
+                         //Where(x => x.DatumPolaska.Year == search.Godina);
             }
             else
             {
@@ -34,7 +34,7 @@ namespace TuristickaAgencijaWebAPI.Services
 
                 if (search?.Godina.HasValue == true)
                 {
-                    query = query.Where(x => x.DatumPolaska.Year == search.Godina);
+                    //query = query.Where(x => x.DatumPolaska.Year == search.Godina);
                 }
                 if (search?.Aktivno.HasValue == true)
                 {

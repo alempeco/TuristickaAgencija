@@ -14,12 +14,12 @@ namespace TuristickaAgencijaWebAPI.Database
         public bool? Aktivno { get; set; }
         public int? BrojMjesta { get; set; }
         public double? Cijena { get; set; }
-        public DateTime DatumPolaska { get; set; }
-        public DateTime DatumPovratka { get; set; }
         public int PutovanjeId { get; set; }
         public byte[] Slika { get; set; }
         public int? SmjestajId { get; set; }
         public int? VodicId { get; set; }
+        public DateTime? DatumPolaska { get; set; }
+        public DateTime? DatumPovratka { get; set; }
 
         public Putovanja Putovanje { get; set; }
         public Smjestaj Smjestaj { get; set; }

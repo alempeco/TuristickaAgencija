@@ -87,7 +87,7 @@ namespace TuristickaAgencijaWebAPI.Mappers
             , a => a.MapFrom(
             y => new MyContext().Putovanja.Find(y.PutovanjeId).Naziv + " | " + y.DatumPolaska.ToString())
             ).ForMember(x => x.Smjestaj, a => a.MapFrom(y => new MyContext().Smjestaj.Find(y.SmjestajId).Naziv)).
-            
+
 
 
             ReverseMap();
@@ -102,7 +102,7 @@ namespace TuristickaAgencijaWebAPI.Mappers
             ReverseMap();
 
 
-          
+
 
             CreateMap<Novosti, TuristickaAgencija.Model.Novosti>().ReverseMap();
             CreateMap<Novosti, NovostiInsertRequest>().ReverseMap();
@@ -159,7 +159,7 @@ namespace TuristickaAgencijaWebAPI.Mappers
                 (x => x.VrstaPutovanja, a => a.MapFrom(y => new MyContext().VrstePutovanja.Find(y.VrstaPutovanjaId).Oznaka)).ReverseMap();
 
 
-            
+
 
 
 

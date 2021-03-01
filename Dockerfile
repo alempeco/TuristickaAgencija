@@ -1,12 +1,12 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
 COPY . .
 
 FROM build AS publish
-RUN dotnet publish "eNatureBeauty.WebAPI" -c Release -o /app
+RUN dotnet publish "TuristickaAgencijaWebAPI" -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .

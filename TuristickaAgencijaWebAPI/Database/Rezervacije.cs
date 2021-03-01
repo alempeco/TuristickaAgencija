@@ -13,7 +13,7 @@ namespace TuristickaAgencijaWebAPI.Database
         public int RezervacijaId { get; set; }
         public int PutnikKorisnikId { get; set; }
         public int TerminPutovanjaId { get; set; }
-        public DateTime Vrijeme { get; set; }
+        public DateTime? Vrijeme { get; set; }
 
         public PutniciKorisnici PutnikKorisnik { get; set; }
         public TerminiPutovanja TerminPutovanja { get; set; }

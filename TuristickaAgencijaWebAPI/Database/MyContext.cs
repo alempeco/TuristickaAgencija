@@ -95,8 +95,6 @@ namespace TuristickaAgencijaWebAPI.Database
 
                 entity.Property(e => e.Sadrzaj).HasMaxLength(250);
 
-                entity.Property(e => e.Vrijeme).HasColumnType("date");
-
                 entity.HasOne(d => d.PutnikKorisnik)
                     .WithMany(p => p.Komentari)
                     .HasForeignKey(d => d.PutnikKorisnikId)
@@ -117,8 +115,6 @@ namespace TuristickaAgencijaWebAPI.Database
                 entity.HasIndex(e => e.ZaposlenikId);
 
                 entity.Property(e => e.NovostId).HasColumnName("NovostID");
-
-                entity.Property(e => e.DatumVrijeme).HasColumnType("date");
 
                 entity.Property(e => e.Naslov)
                     .IsRequired()
@@ -315,8 +311,6 @@ namespace TuristickaAgencijaWebAPI.Database
 
                 entity.Property(e => e.TerminPutovanjaId).HasColumnName("TerminPutovanjaID");
 
-                entity.Property(e => e.Vrijeme).HasColumnType("date");
-
                 entity.HasOne(d => d.PutnikKorisnik)
                     .WithMany(p => p.Rezervacije)
                     .HasForeignKey(d => d.PutnikKorisnikId)
@@ -365,10 +359,6 @@ namespace TuristickaAgencijaWebAPI.Database
                 entity.Property(e => e.TerminPutovanjaId)
                     .HasColumnName("TerminPutovanjaID")
                     .ValueGeneratedOnAdd();
-
-                entity.Property(e => e.DatumPolaska).HasColumnType("datetime");
-
-                entity.Property(e => e.DatumPovratka).HasColumnType("datetime");
 
                 entity.Property(e => e.PutovanjeId).HasColumnName("PutovanjeID");
 
@@ -471,4 +461,5 @@ namespace TuristickaAgencijaWebAPI.Database
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
+
 

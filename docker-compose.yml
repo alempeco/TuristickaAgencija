@@ -20,7 +20,7 @@ services:
     environment:
       - ConnectionStrings:TuristickaAgencija=Server=turistickaagencija-sql,1433;Database=160090;User=sa;Password=QWElkj132!;ConnectRetryCount=0
     ports:
-      - 40088:80
+      - 40088:80 
     networks:
       - turistickaagencijanet
     links:
@@ -29,5 +29,5 @@ services:
       - turistickaagencija-sql
       
 networks:
-  enaturebeautynet:
-    driver: bridge
+  turistickaagencijanet:
+    driver: bridge      

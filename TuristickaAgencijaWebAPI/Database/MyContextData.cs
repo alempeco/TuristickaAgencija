@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace TuristickaAgencijaWebAPI.Database
 {
@@ -86,7 +86,7 @@ namespace TuristickaAgencijaWebAPI.Database
 
             modelBuilder.Entity<Komentari>().HasData(
 
-                 
+
 
                  new Komentari() { KomentarId = 1, PutnikKorisnikId = 1, PutovanjeId = 9, Sadrzaj = "Odlicno", Vrijeme = DateTime.Now.AddDays(-10) },
              new Komentari() { KomentarId = 2, PutnikKorisnikId = 1, PutovanjeId = 9, Sadrzaj = "Top", Vrijeme = DateTime.Now.AddDays(-9) },
@@ -100,21 +100,37 @@ namespace TuristickaAgencijaWebAPI.Database
 
 
             modelBuilder.Entity<Novosti>().HasData(
-               new Novosti() { NovostId = 1, DatumVrijeme = DateTime.Now.AddDays(-10),
-                   Naslov = "Vazna obavjest", PutovanjeId = 2, Sadrzaj = "Termin putovanja se pomjena sa 11h na 13h",
-                   Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+               new Novosti()
+               {
+                   NovostId = 1,
+                   DatumVrijeme = DateTime.Now.AddDays(-10),
+                   Naslov = "Vazna obavjest",
+                   PutovanjeId = 2,
+                   Sadrzaj = "Termin putovanja se pomjena sa 11h na 13h",
+                   Slika = null,
 
-                   ZaposlenikId = 1 },
-               new Novosti() { NovostId = 2, DatumVrijeme = DateTime.Now.AddDays(-5),
-                   Naslov = "Vazna obavjest", PutovanjeId = null, 
+                   ZaposlenikId = 1
+               },
+               new Novosti()
+               {
+                   NovostId = 2,
+                   DatumVrijeme = DateTime.Now.AddDays(-5),
+                   Naslov = "Vazna obavjest",
+                   PutovanjeId = null,
                    Sadrzaj = "Sva putovavanja uslijed pogorsanja epidemioloske situacije se odgađaju do daljnjeg.",
-                   Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
-                   ZaposlenikId = 1 },
-               new Novosti() { NovostId = 3, DatumVrijeme = DateTime.Now.AddDays(-7),
-                   Naslov = "Pomjera satnice za putnike u Barselonu", PutovanjeId = 2, 
-                   Sadrzaj = "Pomjeranje putovanja satnice sa predviđenih 7:00h na 8:30h.", 
-                   Slika =File.ReadAllBytes("Helper/travel_vivendi.png"),
-                   ZaposlenikId = 1 },
+                   Slika = null,
+                   ZaposlenikId = 1
+               },
+               new Novosti()
+               {
+                   NovostId = 3,
+                   DatumVrijeme = DateTime.Now.AddDays(-7),
+                   Naslov = "Pomjera satnice za putnike u Barselonu",
+                   PutovanjeId = 2,
+                   Sadrzaj = "Pomjeranje putovanja satnice sa predviđenih 7:00h na 8:30h.",
+                   Slika = null,
+                   ZaposlenikId = 1
+               },
                new Novosti()
                {
                    NovostId = 7,
@@ -122,7 +138,7 @@ namespace TuristickaAgencijaWebAPI.Database
                    Naslov = "Kako se obuci za putovanje",
                    PutovanjeId = null,
                    Sadrzaj = "Obuci se sto laganije za sva putovanja",
-                   Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                   Slika = null,
 
                    ZaposlenikId = 1
                });
@@ -216,7 +232,7 @@ namespace TuristickaAgencijaWebAPI.Database
                   VrstaPutovanjaId = 7,
                   ZaposlenikId = 1,
                   PrevozId = 5,
-                  Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                  Slika = null,
 
               },
                new Putovanja()
@@ -228,7 +244,7 @@ namespace TuristickaAgencijaWebAPI.Database
                    VrstaPutovanjaId = 4,
                    ZaposlenikId = 1,
                    PrevozId = 10,
-                   Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                   Slika = null,
 
                },
                new Putovanja()
@@ -240,7 +256,7 @@ namespace TuristickaAgencijaWebAPI.Database
                    VrstaPutovanjaId = 4,
                    ZaposlenikId = 1,
                    PrevozId = 10,
-                   Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                   Slika = null,
 
 
                },
@@ -255,7 +271,7 @@ namespace TuristickaAgencijaWebAPI.Database
                     VrstaPutovanjaId = 7,
                     ZaposlenikId = 1,
                     PrevozId = 9,
-                    Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                    Slika = null,
 
 
 
@@ -270,7 +286,7 @@ namespace TuristickaAgencijaWebAPI.Database
                       VrstaPutovanjaId = 7,
                       ZaposlenikId = 1,
                       PrevozId = 5,
-                      Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                      Slika = null,
 
 
 
@@ -285,7 +301,7 @@ namespace TuristickaAgencijaWebAPI.Database
                        VrstaPutovanjaId = 4,
                        ZaposlenikId = 1,
                        PrevozId = 8,
-                       Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                       Slika = null,
 
 
 
@@ -300,7 +316,7 @@ namespace TuristickaAgencijaWebAPI.Database
                           VrstaPutovanjaId = 4,
                           ZaposlenikId = 1,
                           PrevozId = 8,
-                          Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                          Slika = null,
 
 
 
@@ -315,7 +331,7 @@ namespace TuristickaAgencijaWebAPI.Database
                        VrstaPutovanjaId = 5,
                        ZaposlenikId = 1,
                        PrevozId = 3,
-                       Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                       Slika = null,
 
 
 
@@ -329,7 +345,7 @@ namespace TuristickaAgencijaWebAPI.Database
                        VrstaPutovanjaId = 6,
                        ZaposlenikId = 1,
                        PrevozId = 10,
-                       Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                       Slika = null,
 
 
 
@@ -344,7 +360,7 @@ namespace TuristickaAgencijaWebAPI.Database
                        VrstaPutovanjaId = 4,
                        ZaposlenikId = 1,
                        PrevozId = 5,
-                       Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                       Slika = null,
 
 
 
@@ -360,7 +376,7 @@ namespace TuristickaAgencijaWebAPI.Database
                         VrstaPutovanjaId = 7,
                         ZaposlenikId = 1,
                         PrevozId = 4,
-                        Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                        Slika = null,
 
 
 
@@ -378,7 +394,7 @@ namespace TuristickaAgencijaWebAPI.Database
                         VrstaPutovanjaId = 6,
                         ZaposlenikId = 1,
                         PrevozId = 5,
-                        Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                        Slika = null,
 
 
 
@@ -393,7 +409,7 @@ namespace TuristickaAgencijaWebAPI.Database
                         VrstaPutovanjaId = 5,
                         ZaposlenikId = 1,
                         PrevozId = 4,
-                        Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                        Slika = null,
 
 
 
@@ -425,7 +441,7 @@ namespace TuristickaAgencijaWebAPI.Database
                   Opis = "Hotel 3 zvjezdice",
                   CijenaNoc = 100,
                   TipSobe = "jednokrevetne",
-                  Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                  Slika = null,
 
               },
               new Smjestaj()
@@ -439,7 +455,7 @@ namespace TuristickaAgencijaWebAPI.Database
                   Opis = "Hotel 3 zvjezdice",
                   CijenaNoc = 100,
                   TipSobe = "dvokrevetna ",
-                  Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                  Slika = null,
 
               },
               new Smjestaj()
@@ -453,7 +469,7 @@ namespace TuristickaAgencijaWebAPI.Database
                   Opis = "Hotel 3 zvjezdice",
                   CijenaNoc = 40,
                   TipSobe = "Tip ",
-                  Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                  Slika = null,
 
               },
               new Smjestaj()
@@ -467,7 +483,7 @@ namespace TuristickaAgencijaWebAPI.Database
                   Opis = "Hotel 4 zvjezdice",
                   CijenaNoc = 100,
                   TipSobe = "Svi Tip ",
-                  Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                  Slika = null,
 
               },
                new Smjestaj()
@@ -481,7 +497,7 @@ namespace TuristickaAgencijaWebAPI.Database
                    Opis = "Hotel 5 zvjezdice",
                    CijenaNoc = 30,
                    TipSobe = "Svi Tip ",
-                   Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                   Slika = null,
 
                },
                 new Smjestaj()
@@ -495,7 +511,7 @@ namespace TuristickaAgencijaWebAPI.Database
                     Opis = "Hotel 3 zvjezdice",
                     CijenaNoc = 60,
                     TipSobe = "Svi Tip ",
-                    Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                    Slika = null,
 
                 },
                  new Smjestaj()
@@ -509,7 +525,7 @@ namespace TuristickaAgencijaWebAPI.Database
                      Opis = "Hotel 4 zvjezdice",
                      CijenaNoc = 50,
                      TipSobe = "Svi Tip ",
-                     Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                     Slika = null,
 
                  });
 
@@ -526,7 +542,7 @@ namespace TuristickaAgencijaWebAPI.Database
                  PutovanjeId = 1,
                  SmjestajId = 2,
                  VodicId = 2,
-                 Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                 Slika = null,
 
              },
               new TerminiPutovanja()
@@ -540,7 +556,7 @@ namespace TuristickaAgencijaWebAPI.Database
                   PutovanjeId = 3,
                   SmjestajId = 2,
                   VodicId = 2,
-                  Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                  Slika = null,
 
               },
 
@@ -555,7 +571,7 @@ namespace TuristickaAgencijaWebAPI.Database
                   PutovanjeId = 1,
                   SmjestajId = 11,
                   VodicId = 3,
-                  Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                  Slika = null,
 
               },
                new TerminiPutovanja()
@@ -569,7 +585,7 @@ namespace TuristickaAgencijaWebAPI.Database
                    PutovanjeId = 5,
                    SmjestajId = 2,
                    VodicId = 3,
-                   Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                   Slika = null,
 
                },
                 new TerminiPutovanja()
@@ -583,7 +599,7 @@ namespace TuristickaAgencijaWebAPI.Database
                     PutovanjeId = 2,
                     SmjestajId = 2,
                     VodicId = 3,
-                    Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                    Slika = null,
 
                 },
                  new TerminiPutovanja()
@@ -597,7 +613,7 @@ namespace TuristickaAgencijaWebAPI.Database
                      PutovanjeId = 7,
                      SmjestajId = 11,
                      VodicId = 3,
-                     Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                     Slika = null,
 
                  },
                    new TerminiPutovanja()
@@ -611,7 +627,7 @@ namespace TuristickaAgencijaWebAPI.Database
                        PutovanjeId = 1,
                        SmjestajId = 2,
                        VodicId = 1,
-                       Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                       Slika = null,
 
                    },
                    new TerminiPutovanja()
@@ -623,10 +639,10 @@ namespace TuristickaAgencijaWebAPI.Database
                        DatumPolaska = DateTime.Now.AddDays(-15),
                        DatumPovratka = DateTime.Now.AddDays(-11),
                        PutovanjeId = 1,
-                      
+
                        SmjestajId = 2,
                        VodicId = 1,
-                       Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                       Slika =null,
 
                    },
                     new TerminiPutovanja()
@@ -640,7 +656,7 @@ namespace TuristickaAgencijaWebAPI.Database
                         PutovanjeId = 2,
                         SmjestajId = 2,
                         VodicId = 2,
-                        Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                        Slika = null,
 
                     },
                     new TerminiPutovanja()
@@ -654,7 +670,7 @@ namespace TuristickaAgencijaWebAPI.Database
                         PutovanjeId = 9,
                         SmjestajId = 14,
                         VodicId = 3,
-                        Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                        Slika = null,
 
                     },
                      new TerminiPutovanja()
@@ -668,7 +684,7 @@ namespace TuristickaAgencijaWebAPI.Database
                          PutovanjeId = 8,
                          SmjestajId = 15,
                          VodicId = 4,
-                         Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                         Slika = null,
 
                      },
                       new TerminiPutovanja()
@@ -682,7 +698,7 @@ namespace TuristickaAgencijaWebAPI.Database
                           PutovanjeId = 10,
                           SmjestajId = 13,
                           VodicId = 1,
-                          Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                          Slika = null,
 
                       },
                        new TerminiPutovanja()
@@ -696,7 +712,7 @@ namespace TuristickaAgencijaWebAPI.Database
                            PutovanjeId = 11,
                            SmjestajId = 2,
                            VodicId = 2,
-                           Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                           Slika = null,
 
                        },
                        new TerminiPutovanja()
@@ -710,7 +726,7 @@ namespace TuristickaAgencijaWebAPI.Database
                            PutovanjeId = 12,
                            SmjestajId = 2,
                            VodicId = 3,
-                           Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                           Slika = null,
 
                        },
 
@@ -725,7 +741,7 @@ namespace TuristickaAgencijaWebAPI.Database
                              PutovanjeId = 13,
                              SmjestajId = 15,
                              VodicId = 3,
-                             Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                             Slika = null,
 
                          },
                          new TerminiPutovanja()
@@ -739,7 +755,7 @@ namespace TuristickaAgencijaWebAPI.Database
                              PutovanjeId = 1,
                              SmjestajId = 2,
                              VodicId = 2,
-                             Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                             Slika = null,
 
                          },
                          new TerminiPutovanja()
@@ -753,7 +769,7 @@ namespace TuristickaAgencijaWebAPI.Database
                              PutovanjeId = 1,
                              SmjestajId = 2,
                              VodicId = 2,
-                             Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                             Slika = null,
 
                          },
                          new TerminiPutovanja()
@@ -767,7 +783,7 @@ namespace TuristickaAgencijaWebAPI.Database
                              PutovanjeId = 1,
                              SmjestajId = 2,
                              VodicId = 3,
-                             Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                             Slika = null,
 
                          },
 
@@ -782,7 +798,7 @@ namespace TuristickaAgencijaWebAPI.Database
                              PutovanjeId = 1,
                              SmjestajId = 2,
                              VodicId = 2,
-                             Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                             Slika = null,
 
                          },
                          new TerminiPutovanja()
@@ -796,7 +812,7 @@ namespace TuristickaAgencijaWebAPI.Database
                              PutovanjeId = 6,
                              SmjestajId = 12,
                              VodicId = 5,
-                             Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                             Slika = null,
 
                          });
 
@@ -833,7 +849,7 @@ namespace TuristickaAgencijaWebAPI.Database
                  Jmbg = "1231231232321",
                  Kontakt = "+062 71 485 300",
                  Zauzet = true,
-                 Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                 Slika = null,
 
              },
               new Vodici()
@@ -844,7 +860,7 @@ namespace TuristickaAgencijaWebAPI.Database
                   Jmbg = "4324322423423",
                   Kontakt = "+123 45 678 910",
                   Zauzet = false,
-                  Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                  Slika = null,
 
               },
               new Vodici()
@@ -855,7 +871,7 @@ namespace TuristickaAgencijaWebAPI.Database
                   Jmbg = "4324322423423",
                   Kontakt = "+123 45 678 3",
                   Zauzet = false,
-                  Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                  Slika = null,
 
               },
                new Vodici()
@@ -866,7 +882,7 @@ namespace TuristickaAgencijaWebAPI.Database
                    Jmbg = "4324322423423",
                    Kontakt = "+123 45 678 3",
                    Zauzet = false,
-                   Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                   Slika = null,
 
                },
                 new Vodici()
@@ -877,7 +893,7 @@ namespace TuristickaAgencijaWebAPI.Database
                     Jmbg = "4324322423423",
                     Kontakt = "+123 45 678 3",
                     Zauzet = false,
-                    Slika = File.ReadAllBytes("Helper/travel_vivendi.png"),
+                    Slika = null,
 
                 });
 
@@ -893,7 +909,7 @@ namespace TuristickaAgencijaWebAPI.Database
 
 
 
-       
+
 
 
 
