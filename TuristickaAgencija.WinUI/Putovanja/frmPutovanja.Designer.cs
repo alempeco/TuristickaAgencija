@@ -38,7 +38,6 @@ namespace TuristickaAgencija.WinUI.Putovanja
             this.VrstaPutovanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prevoz = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slika = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPutovanja)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,8 +82,7 @@ namespace TuristickaAgencija.WinUI.Putovanja
             this.Naziv,
             this.VrstaPutovanja,
             this.Grad,
-            this.Prevoz,
-            this.Slika});
+            this.Prevoz});
             this.dgvPutovanja.Location = new System.Drawing.Point(0, 87);
             this.dgvPutovanja.Name = "dgvPutovanja";
             this.dgvPutovanja.ReadOnly = true;
@@ -134,16 +132,6 @@ namespace TuristickaAgencija.WinUI.Putovanja
             this.Prevoz.Name = "Prevoz";
             this.Prevoz.ReadOnly = true;
             // 
-            // Slika
-            // 
-            this.Slika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Slika.DataPropertyName = "Slika";
-            this.Slika.HeaderText = "Slika";
-            this.Slika.Name = "Slika";
-            this.Slika.ReadOnly = true;
-            this.Slika.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Slika.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // frmPutovanja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +160,5 @@ namespace TuristickaAgencija.WinUI.Putovanja
         private System.Windows.Forms.DataGridViewTextBoxColumn VrstaPutovanja;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prevoz;
-        private System.Windows.Forms.DataGridViewImageColumn Slika;
     }
 }

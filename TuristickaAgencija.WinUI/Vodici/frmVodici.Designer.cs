@@ -40,7 +40,6 @@ namespace TuristickaAgencija.WinUI.Vodici
             this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kontakt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slika = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVodici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,8 +92,7 @@ namespace TuristickaAgencija.WinUI.Vodici
             this.Ime,
             this.Prezime,
             this.Kontakt,
-            this.JMBG,
-            this.Slika});
+            this.JMBG});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,16 +152,6 @@ namespace TuristickaAgencija.WinUI.Vodici
             this.JMBG.Name = "JMBG";
             this.JMBG.ReadOnly = true;
             // 
-            // Slika
-            // 
-            this.Slika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Slika.DataPropertyName = "Slika";
-            this.Slika.HeaderText = "Slika";
-            this.Slika.Name = "Slika";
-            this.Slika.ReadOnly = true;
-            this.Slika.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Slika.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // frmVodici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +181,5 @@ namespace TuristickaAgencija.WinUI.Vodici
         private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kontakt;
         private System.Windows.Forms.DataGridViewTextBoxColumn JMBG;
-        private System.Windows.Forms.DataGridViewImageColumn Slika;
     }
 }

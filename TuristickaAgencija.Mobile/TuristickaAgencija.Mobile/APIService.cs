@@ -15,7 +15,7 @@ namespace TuristickaAgencija.Mobile
         private string _route = null;
 
 #if DEBUG
-        private string _apiUrl = "http://localhost:53203/api";
+        private string _apiUrl = "http://localhost:40088/api";
 #endif
 #if RELEASE
         private string _apiUrl = "https://mojwebsite.com/api";

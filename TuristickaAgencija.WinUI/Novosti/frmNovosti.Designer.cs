@@ -38,7 +38,6 @@ namespace TuristickaAgencija.WinUI.Novosti
             this.Naslov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sadrzaj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatumVrijeme = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slika = new System.Windows.Forms.DataGridViewImageColumn();
             this.PutovanjeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNovosti)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +93,6 @@ namespace TuristickaAgencija.WinUI.Novosti
             this.Naslov,
             this.Sadrzaj,
             this.DatumVrijeme,
-            this.Slika,
             this.PutovanjeID});
             this.dgvNovosti.Location = new System.Drawing.Point(12, 87);
             this.dgvNovosti.Name = "dgvNovosti";
@@ -137,14 +135,6 @@ namespace TuristickaAgencija.WinUI.Novosti
             this.DatumVrijeme.Name = "DatumVrijeme";
             this.DatumVrijeme.ReadOnly = true;
             // 
-            // Slika
-            // 
-            this.Slika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Slika.DataPropertyName = "Slika";
-            this.Slika.HeaderText = "Slika";
-            this.Slika.Name = "Slika";
-            this.Slika.ReadOnly = true;
-            // 
             // PutovanjeID
             // 
             this.PutovanjeID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -183,7 +173,6 @@ namespace TuristickaAgencija.WinUI.Novosti
         private System.Windows.Forms.DataGridViewTextBoxColumn Naslov;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sadrzaj;
         private System.Windows.Forms.DataGridViewTextBoxColumn DatumVrijeme;
-        private System.Windows.Forms.DataGridViewImageColumn Slika;
         private System.Windows.Forms.DataGridViewTextBoxColumn PutovanjeID;
     }
 }

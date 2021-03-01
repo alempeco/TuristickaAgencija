@@ -43,7 +43,6 @@ namespace TuristickaAgencija.WinUI.Termini
             this.DatumPovratka = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrojMjesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SmjestajId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Slika = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,8 +101,7 @@ namespace TuristickaAgencija.WinUI.Termini
             this.DatumPolaska,
             this.DatumPovratka,
             this.BrojMjesta,
-            this.SmjestajId,
-            this.Slika});
+            this.SmjestajId});
             this.dgvTermini.Location = new System.Drawing.Point(24, 99);
             this.dgvTermini.Name = "dgvTermini";
             this.dgvTermini.ReadOnly = true;
@@ -178,13 +176,6 @@ namespace TuristickaAgencija.WinUI.Termini
             this.SmjestajId.Name = "SmjestajId";
             this.SmjestajId.ReadOnly = true;
             // 
-            // Slika
-            // 
-            this.Slika.DataPropertyName = "Slika";
-            this.Slika.HeaderText = "Slika";
-            this.Slika.Name = "Slika";
-            this.Slika.ReadOnly = true;
-            // 
             // frmTermini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +211,5 @@ namespace TuristickaAgencija.WinUI.Termini
         private System.Windows.Forms.DataGridViewTextBoxColumn DatumPovratka;
         private System.Windows.Forms.DataGridViewTextBoxColumn BrojMjesta;
         private System.Windows.Forms.DataGridViewTextBoxColumn SmjestajId;
-        private System.Windows.Forms.DataGridViewImageColumn Slika;
     }
 }
