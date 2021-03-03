@@ -6,9 +6,9 @@ namespace TuristickaAgencijaWebAPI.Database
 {
     public partial class MyContext : DbContext
     {
-        public MyContext()
-        {
-        }
+        //public MyContext()
+        //{
+        //}
 
         public MyContext(DbContextOptions<MyContext> options)
             : base(options)
@@ -36,14 +36,14 @@ namespace TuristickaAgencijaWebAPI.Database
         public virtual DbSet<VrstePutovanja> VrstePutovanja { get; set; }
         public virtual DbSet<Zaposlenici> Zaposlenici { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.;Database=160090;Trusted_Connection=True;");
-            }
-        }
+//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//        {
+//            if (!optionsBuilder.IsConfigured)
+//            {
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+//                optionsBuilder.UseSqlServer("Server=.;Database=160090;Trusted_Connection=True;");
+//            }
+//        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
